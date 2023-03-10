@@ -148,7 +148,8 @@ XPadDevice xpad_devices[] = {
   { GAMEPAD_XBOXONE,          0x24c6, 0x543a, "AmazonBasics XboxOne Controller" },
   { GAMEPAD_XBOXONE,          0x0e6f, 0x0139, "Afterglow Wired Controller for Xbox One" },
 
-  { GAMEPAD_PLAYSTATION3_USB, 0x054c, 0x0268, "PLAYSTATION(R)3 Controller" }
+  { GAMEPAD_PLAYSTATION3_USB, 0x054c, 0x0268, "PLAYSTATION(R)3 Controller" },
+  { GAMEPAD_XBOXONE,          0x10f5, 0x7013, "Turtle Beach Turtle Beach REACT-R" }
 };
 
 const int xpad_devices_count = sizeof(xpad_devices)/sizeof(XPadDevice);
