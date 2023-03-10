@@ -19,7 +19,7 @@ def build_dbus_glue(target, source, env):
     xml = re.sub(r"callback = \(([A-Za-z_]+)\) \(marshal_data \? marshal_data : cc->callback\);",
                  r"union { \1 fn; void* obj; } conv;\n  "
                  "conv.obj = (marshal_data ? marshal_data : cc->callback);\n  "
-                 "callback = conv.fn;", xml)
+                 "callback = conv.fn;", xml.decode('utf-8'))
 
     with open(target[0].get_path(), "w") as f:
         f.write(xml)
